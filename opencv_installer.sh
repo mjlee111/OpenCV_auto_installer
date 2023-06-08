@@ -62,7 +62,7 @@ if pkg-config --exists opencv; then
     sudo apt-get purge opencv*
     sudo apt-get purge libopencv*
     sudo apt-get autoremove
-    sudo find /usr/local/ -name "*opencv*" -exec rm -y -i {} \;
+    sudo find /usr/local/ -name "*opencv*" -exec rm -f {} \;
     echo "Current version of OpenCV has been deleted."
   else
     echo "Installation stopped. Current version of OpenCV was not deleted."
@@ -84,7 +84,7 @@ if pkg-config --exists opencv4; then
     sudo apt-get purge opencv*
     sudo apt-get purge libopencv*
     sudo apt-get autoremove
-    sudo find /usr/local/ -name "*opencv*" -exec rm -y -i {} \;
+    sudo find /usr/local/ -name "*opencv*" -exec rm -f {} \;
     echo "Current version of OpenCV has been deleted."
   else
     echo "Installation stopped. Current version of OpenCV was not deleted."
