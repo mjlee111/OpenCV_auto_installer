@@ -3,6 +3,11 @@
 ### - For ROS users, some packages might be deleted after the installation. Can be restored while the installation.
 ### - Some OpenCV versions may not be installed with this script. This is NOT a official installer!
 
+# Test Environments
+## - Ubuntu 18.04
+## - Ubuntu 20.04
+## - Ubuntu 22.04 
+##
 # How to use
 ```shell
 sudo apt-get install git 
