@@ -7,6 +7,7 @@
 ╚█████╔╝██║░░░░░███████╗██║░╚███║╚█████╔╝░░╚██╔╝░░
 ░╚════╝░╚═╝░░░░░╚══════╝╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░
 </div>
+
 # OpenCV Auto Installer
 ## This shell file installs OpenCV, version you desire.
 ### - For ROS users, some packages might be deleted after the installation. Can be restored while the installation.
