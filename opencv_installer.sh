@@ -72,6 +72,28 @@ else
   echo "OpenCV is not installed"
 fi
 
+custom_echo "Checking if OpneCV4 is already installed" "green"
+if pkg-config --exists opencv4; then
+  opencv_version=$(pkg-config --modversion opencv4)
+  custom_echo "OpenCV4 already installed!!! current OpenCV2 version : "$opencv_version"" "red"
+  custom_echo "Delete current version? If not, installation ends" "red"
+  read -p "Press Enter to delete the current version and proceed, or any other key to exit: " choice
+
+  if [ "$choice" == "" ]; then
+    echo "Deleting the current version of OpenCV..."
+    sudo apt-get purgeopencv*
+    sudo apt-get purgelibopencv*
+    sudo apt-get autoremove
+    sudo find /usr/local/ -name "*opencv*" -exec rm -i {} \;
+    echo "Current version of OpenCV has been deleted."
+  else
+    echo "Installation stopped. Current version of OpenCV was not deleted."
+    exit
+  fi
+else
+  echo "OpenCV4 is not installed"
+fi
+
 custom_echo "Installing requirements" "green"
 loading_animation
 sudo apt update -y
