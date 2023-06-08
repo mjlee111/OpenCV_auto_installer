@@ -55,7 +55,7 @@ text_art="
 ██║░░██║██╔═══╝░██╔══╝░░██║╚████║██║░░██╗░╚████╔╝░
 ╚█████╔╝██║░░░░░███████╗██║░╚███║╚█████╔╝░░╚██╔╝░░
 ░╚════╝░╚═╝░░░░░╚══════╝╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░
-'
+"
 
 terminal_width=$(tput cols)
 padding_length=$(( (terminal_width - ${#text_art}) / 2 ))
@@ -201,8 +201,4 @@ else
   pkg-config --modversion opencv
 fi
 custom_echo "COMPLETE" "green"
-
-
-
-
 
