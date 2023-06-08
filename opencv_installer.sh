@@ -172,7 +172,16 @@ fi
 loading_animation
 cd
 sudo rm -rf OpenCV_auto_installer
-echo "COMPLETE"
+first_digit=$(echo "$cvversion" | cut -d. -f1)
+
+if [ "$first_digit" = "4" ]; then
+  pkg-config --modversion opencv4
+else
+  pkg-config --modversion opencv
+fi
+custom_echo "COMPLETE" "green"
+
+
 
 
 
