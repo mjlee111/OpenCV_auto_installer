@@ -28,7 +28,8 @@ sudo chmod +x opencv_installer.sh
 ###
 ###
 ![Screenshot from 2023-06-09 05-22-48](https://github.com/mjlee111/OpenCV_auto_installer/assets/66550892/23b1d725-429c-4d04-9262-9c930638b0cf)
-### For ROS users, few pakcages can be restored.
+### For ROS users, few deleted pakcages can be restored.
+### If you are not a ROS user, enter any key to skip.
 
 
 
