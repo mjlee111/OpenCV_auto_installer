@@ -8,6 +8,14 @@
 ░╚════╝░╚═╝░░░░░╚══════╝╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░
 </div>
 
+<div align="center">
+██████╗░░█████╗░░██████╗
+██╔══██╗██╔══██╗██╔════╝
+██████╔╝██║░░██║╚█████╗░
+██╔══██╗██║░░██║░╚═══██╗
+██║░░██║╚█████╔╝██████╔╝
+╚═╝░░╚═╝░╚════╝░╚═════╝░
+ </div>
 ## This shell file installs OpenCV, version you desire.
 ### - For ROS users, some packages might be deleted after the installation. Can be restored while the installation.
 ### - Some OpenCV versions may not be installed with this script. This is NOT a official installer!
