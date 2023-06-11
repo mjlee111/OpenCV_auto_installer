@@ -65,5 +65,3 @@ sudo chmod +x opencv_installer.sh
 ### For ROS users, few deleted pakcages can be restored.
 
 ### If you are not a ROS user, enter any key to skip.
-
-## push test
