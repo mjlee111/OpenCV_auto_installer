@@ -27,6 +27,8 @@
 
 # How to use
 
+## OpenCV Installer
+
 ```shell
 sudo apt-get install git
 cd
@@ -36,13 +38,13 @@ sudo chmod +x opencv_installer.sh
 ./opencv_installer.sh
 ```
 
-## After running the command above ...
+### After running the command above ...
 
 ![Screenshot from 2023-06-09 08-34-51](https://github.com/mjlee111/OpenCV_auto_installer/assets/66550892/c08b064f-b92e-4cb8-9400-eb738b9591a9)
 
-### If there is a opencv or opencv4 already installed, the shell will ask wether to continue or stop.
+#### If there is a opencv or opencv4 already installed, the shell will ask wether to continue or stop.
 
-### Press ENTER to continue or any other key to stop.
+#### Press ENTER to continue or any other key to stop.
 
 ##
 
@@ -52,4 +54,11 @@ sudo chmod +x opencv_installer.sh
 
 ![Screenshot from 2023-06-09 05-16-36](https://github.com/mjlee111/OpenCV_auto_installer/assets/66550892/1c1be558-2509-4005-bd9a-470a08d89088)
 
-### If there is no opencv or opencv4 installed, the shell will ask what version you will install.
+#### If there is no opencv or opencv4 installed, the shell will ask what version you will install.
+
+
+## CV_bridge Symbolic link & config file setup for ROS users. (currently noetic only)
+```shell
+sudo chmod +x CVBRIDGE.sh
+./CVBRIDGE.sh
+```
