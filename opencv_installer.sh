@@ -176,21 +176,7 @@ cd && sudo rm -rf opencv
 echo " "
 echo " "
 echo " "
-custom_echo "There might be some removed packaged for ROS. Install them?" "green"
-read -p "Press Enter to install and proceed, or any other key to exit: " choice
-if ["$choice" == "" ]; then
-  ros_version=$(rosversion -d)
-  custom_echo "${ros_version}" "red"
-  sudo apt-get install -y ros-$ros_version-cv-bridge
-  sudo apt-get install -y ros-$ros_version-image-view
-  sudo apt-get install -y rosbash
-  sudo apt-get install -y ros-$ros_version-usb-cam
-  custom_echo "ROS packages installed completely" "green"
-  custom_ehco "PLEASE EDIT CV_BRIDGE CMAKE FILE" "red"
-fi 
 
-
-loading_animation
 cd
 sudo rm -rf OpenCV_auto_installer
 first_digit=$(echo "$cvversion" | cut -d. -f1)
@@ -200,5 +186,6 @@ if [ "$first_digit" = "4" ]; then
 else
   pkg-config --modversion opencv
 fi
-custom_echo "COMPLETE" "green"
+
+custom_echo "OpenCV Installation COMPLETE" "green"
 
