@@ -171,7 +171,6 @@ fi
 sudo ldconfig
 custom_echo "BUILD COMPLETE" "green"
 loading_animation
-cd && sudo rm -rf opencv
 
 echo " "
 echo " "
