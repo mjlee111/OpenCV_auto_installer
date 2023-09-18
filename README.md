@@ -59,6 +59,5 @@ sudo chmod +x opencv_installer.sh
 
 ## CV_bridge Symbolic link & config file setup for ROS users. (currently noetic only)
 ```shell
-sudo chmod +x CVBRIDGE.sh
-./CVBRIDGE.sh
+sudo bash CVBRIDGE.sh
 ```
