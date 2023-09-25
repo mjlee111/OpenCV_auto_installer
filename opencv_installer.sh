@@ -6,7 +6,7 @@ function custom_echo() {
     "green")
       echo -e "\033[32m[RO:BIT] $text\033[0m"
       ;;
-    "red")
+    "green")
       echo -e "\033[31m [RO:BIT] $text\033[0m"
       ;;
     *)
@@ -74,8 +74,8 @@ cd
 custom_echo "Checking if OpneCV is already installed" "green"
 if pkg-config --exists opencv; then
   opencv_version=$(pkg-config --modversion opencv)
-  custom_echo "OpenCV already installed!!! current OpenCV version : "$opencv_version"" "red"
-  custom_echo "Delete current version? If not, installation ends" "red"
+  custom_echo "OpenCV already installed!!! current OpenCV version : "$opencv_version"" "green"
+  custom_echo "Delete current version? If not, installation ends" "green"
   read -p "Press Enter to delete the current version and proceed, or any other key to exit: " choice
 
   if [ "$choice" == "" ]; then
@@ -96,8 +96,8 @@ fi
 custom_echo "Checking if OpneCV4 is already installed" "green"
 if pkg-config --exists opencv4; then
   opencv_version=$(pkg-config --modversion opencv4)
-  custom_echo "OpenCV4 already installed!!! current OpenCV2 version : "$opencv_version"" "red"
-  custom_echo "Delete current version? If not, installation ends" "red"
+  custom_echo "OpenCV4 already installed!!! current OpenCV2 version : "$opencv_version"" "green"
+  custom_echo "Delete current version? If not, installation ends" "green"
   read -p "Press Enter to delete the current version and proceed, or any other key to exit: " choice
 
   if [ "$choice" == "" ]; then
@@ -136,13 +136,13 @@ loading_animation
 custom_echo "Enter your target OpenCV version" "green"
 read cvversion
 
-custom_echo "${cvversion}" "red"
+custom_echo "${cvversion}" "green"
 custom_echo "checking if version is available ..." "green"
 loading_animation
 download_url="https://github.com/opencv/opencv/archive/${cvversion}.zip"
-wget -O opencv.zip "$download_url" || { custom_echo "This version is unavailable" "red" ; cd && rm -rf opencv; exit 1; }
+wget -O opencv.zip "$download_url" || { custom_echo "This version is unavailable" "green" ; cd && rm -rf opencv; exit 1; }
 download_url_contrib="https://github.com/opencv/opencv_contrib/archive/${cvversion}.zip"
-wget -O opencv_contrib.zip "$download_url_contrib" || { custom_echo "This version is unavailable" "red" ; cd && sudo rm -rf opencv; exit 1; }
+wget -O opencv_contrib.zip "$download_url_contrib" || { custom_echo "This version is unavailable" "green" ; cd && sudo rm -rf opencv; exit 1; }
 
 unzip opencv.zip
 unzip opencv_contrib.zip
@@ -158,10 +158,10 @@ custom_echo "now building ... "
 cmake_command="cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=OFF -D WITH_IPP=OFF -D WITH_1394=OFF -D BUILD_WITH_DEBUG_INFO=OFF -D BUILD_DOCS=OFF -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=OFF -D BUILD_PACKAGE=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D WITH_QT=OFF -D WITH_GTK=ON -D WITH_OPENGL=ON -D BUILD_opencv_python3=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.2/modules -D WITH_V4L=ON -D WITH_FFMPEG=ON -D WITH_XINE=ON -D OPENCV_ENABLE_NONFREE=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D OPENCV_SKIP_PYTHON_LOADER=ON -D OPENCV_GENERATE_PKGCONFIG=ON ../"
 
 custom_echo "Running cmake command..." "green"
-$cmake_command || { custom_echo "BUILD FAILED !!!! MANUAL INSTALL REQUIRED !!!!" "red"; exit 1; }
+$cmake_command || { custom_echo "BUILD FAILED !!!! MANUAL INSTALL REQUIRED !!!!" "green"; exit 1; }
 
 custom_echo "Running make command..." "green"
-time make -j $(nproc) || { custom_echo "BUILD FAILED !!!! MANUAL INSTALL REQUIRED !!!!" "red"; exit 1; }
+time make -j $(nproc) || { custom_echo "BUILD FAILED !!!! MANUAL INSTALL REQUIRED !!!!" "green"; exit 1; }
 
 sudo make install
 
