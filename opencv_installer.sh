@@ -136,7 +136,7 @@ loading_animation
 custom_echo "Enter your target OpenCV version" "green"
 read cvversion
 
-custom_echo "${cvversion}" "red"
+custom_echo "${cvversion}" "green"
 custom_echo "checking if version is available ..." "green"
 loading_animation
 download_url="https://github.com/opencv/opencv/archive/${cvversion}.zip"
