@@ -66,6 +66,7 @@ echo -e "\033[38;5;208m$padding$text_art\033[0m"
 
 custom_echo "RO:BIT 17th Myeungjin Lee" "green"
 custom_echo "OpenCV Auto Installer" "green"
+custom_echo "Version 2.0" "green"
 
 loading_animation
 
