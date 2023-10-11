@@ -178,7 +178,7 @@ echo " "
 echo " "
 
 cd
-sudo rm -rf OpenCV_auto_installer
+#sudo rm -rf OpenCV_auto_installer
 first_digit=$(echo "$cvversion" | cut -d. -f1)
 
 if [ "$first_digit" = "4" ]; then
