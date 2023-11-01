@@ -129,7 +129,7 @@ sudo apt-get -y install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 sudo apt-get -y install libqt4-dev
 sudo apt-get -y install mesa-utils libgl1-mesa-dri libgtkgl2.0-dev libgtkglext1-dev
 sudo apt-get -y install libatlas-base-dev gfortran libeigen3-dev
-
+sudo apt-get -y install unzip
 
 mkdir opencv && cd opencv
 
