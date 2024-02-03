@@ -34,7 +34,6 @@ sudo apt-get install git
 cd
 git clone https://github.com/mjlee111/OpenCV_auto_installer.git
 cd OpenCV_auto_installer
-sudo chmod +x opencv_installer.sh
 ./opencv_installer.sh
 ```
 
