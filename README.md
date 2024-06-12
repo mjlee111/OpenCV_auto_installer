@@ -13,7 +13,7 @@
 
 ### - For ROS users, some packages might be deleted after the installation. Can be restored while the installation.
 
-### - Some OpenCV versions may not be installed with this script. This is NOT a official installer!
+### - Some OpenCV versions may not be installed with this script. This is NOT an official installer!
 
 # Test Environments
 
